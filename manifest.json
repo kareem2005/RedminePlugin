@@ -1,0 +1,32 @@
+{
+
+  "manifest_version": 2,
+  "name": "Firefox Redmine Plugin",
+  "version": "1.0",
+ 
+  "description": "Adds a nice features.",
+  "icons": {
+    "48": "icons/main-48.png"
+  },
+  
+  "applications": {
+    "gecko": {
+      "id": "jabbarovkareem@gmail.com",
+      "strict_min_version": "45.0"
+    }
+  },
+
+  "browser_action": {
+    "browser_style": true,
+    "default_icon": "icons/main-32.png",
+    "default_title": "RedminePlugin",
+    "default_popup": "popup/choose_task.html"
+  },
+
+  "options_ui": {
+    "page": "settings/settings.html"
+  },
+
+  "permissions": ["activeTab", "storage"]
+
+}
