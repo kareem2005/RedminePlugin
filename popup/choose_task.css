@@ -4,6 +4,7 @@ html, body {
 }
 
 .button {
+    width: 100px;
   margin: 3% auto;
   padding: 4px;
   text-align: center;
@@ -17,19 +18,16 @@ html, body {
 .redmine:hover {
     background-color: #dc836e;
 }
+.tasks:hover {
+    background-color: #CFF2F2;
+}
 
 .redmine {
     background-color: #dc999f;
 }
-
 .settings {
  background-color: #E5F2F2;
 }
-
-.clear {
- background-color: #FBFBC9;
-}
-
-.clear:hover {
- background-color: #EAEAC9;
+.tasks {
+    background-color: #E5F2F2;
 }
