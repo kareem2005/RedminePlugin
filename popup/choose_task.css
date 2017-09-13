@@ -1,5 +1,6 @@
 html, body {
-  width: 100px;
+  width: 150px;
+    height: 400px;
 }
 
 .button {
@@ -10,7 +11,7 @@ html, body {
   cursor: pointer;
 }
 
-.beast:hover {
+.settings:hover {
   background-color: #CFF2F2;
 }
 .redmine:hover {
@@ -21,7 +22,7 @@ html, body {
     background-color: #dc999f;
 }
 
-.beast {
+.settings {
  background-color: #E5F2F2;
 }
 
