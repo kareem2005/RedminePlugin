@@ -10,7 +10,7 @@ function getApiKey() {
 }
 
 function onError(error) {
-    console.log(`Error: ${error}`);
+    console.log("Error: " + error);
 }
 
 document.addEventListener("click", function(e) {
@@ -33,23 +33,25 @@ document.addEventListener("click", function(e) {
     // Button "Get actual tasks"
   if (e.target.classList.contains("tasks"))
     {
-
+      var url = "___";
       var xhttp = new XMLHttpRequest();
-      xhttp.open("GET", "http://rm.cit-sk.ru/issues.json", false);
+      xhttp.open("GET", "http://" + url + "/issues.xml?assigned_to_id=me", true);
       xhttp.setRequestHeader("Content-Type", "application/json");
-      xhttp.setRequestHeader("X-Redmine-API-Key", "ec80bfff50f3f6bf04249a1e0e9e9830fc2a3b27");
-
+      xhttp.setRequestHeader("X-Redmine-API-Key", "___");
+      xhttp.setRequestHeader("Access-Control-Allow-Origin", "1");
+      xhttp.send();
+      alert(xhttp.responseText);
     }
 
   // Button "Settings"
   if (e.target.classList.contains("settings"))
   {
       function onOpened() {
-          console.log(`Settings page opened`);
+          console.log("Settings page opened");
       }
 
       function onError(error) {
-          console.log(`Error: ${error}`);
+          console.log("Error: " + error);
       }
 
       var openingSettings = browser.runtime.openOptionsPage();
