@@ -1,19 +1,23 @@
 html, body {
-  width: 150px;
-    height: 400px;
-}
+    width: 400px;
 
+}
+.tasktable {
+    padding-bottom: 8px;
+}
 .button {
-    width: 100px;
+    width: 120px;
+    height: 30px;
   margin: 3% auto;
   padding: 4px;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.2em;
   cursor: pointer;
 }
 
+
 .settings:hover {
-  background-color: #CFF2F2;
+  background-color: #f2d2a4;
 }
 .redmine:hover {
     background-color: #dc836e;
@@ -21,13 +25,31 @@ html, body {
 .tasks:hover {
     background-color: #CFF2F2;
 }
+.taskstatus:hover {
+    background-color: #f2d2a4;
+}
+.ready:hover {
+    background-color: #dc836e;
+}
+.tasksubject:hover {
+    background-color: #CFF2F2;
+}
 
 .redmine {
     background-color: #dc999f;
 }
 .settings {
- background-color: #E5F2F2;
+ background-color: #f2ebdc;
 }
 .tasks {
+    background-color: #E5F2F2;
+}
+.taskstatus {
+    background-color: #f2ebdc;
+}
+.ready {
+    background-color: #dc999f;
+}
+.tasksubject {
     background-color: #E5F2F2;
 }
