@@ -6,7 +6,7 @@
  
   "description": "Adds a nice features.",
   "icons": {
-    "48": "icons/main-48.png"
+    "48": "icons/redmine-48.png"
   },
   
   "applications": {
@@ -18,7 +18,7 @@
 
   "browser_action": {
     "browser_style": true,
-    "default_icon": "icons/main-32.png",
+    "default_icon": "icons/redmine-32.png",
     "default_title": "RedminePlugin",
     "default_popup": "popup/choose_task.html"
   },
