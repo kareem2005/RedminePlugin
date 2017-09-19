@@ -1,12 +1,19 @@
 {
 
   "manifest_version": 2,
-  "name": "Chrome Redmine Plugin",
+  "name": "Firefox Redmine Plugin",
   "version": "1.0",
- 
+
   "description": "Adds a nice simple features for usage with corporative Redmine server.",
   "icons": {
     "48": "icons/redmine-48.png"
+  },
+
+  "applications": {
+    "gecko": {
+      "id": "jabbarovkareem@gmail.com",
+      "strict_min_version": "45.0"
+    }
   },
 
   "browser_action": {

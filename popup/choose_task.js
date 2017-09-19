@@ -1,8 +1,11 @@
-
-var gettingApi = getApiKey();
-var gettingDomain = getRedmineDomain();
 var API = "";
 var DOMAIN = "";
+// ---------------------------------------------------------
+//Mozilla W3 browser extension code
+/*
+var gettingApi = getApiKey();
+var gettingDomain = getRedmineDomain();
+
 
 
 function onGotApi(item) {
@@ -28,8 +31,19 @@ function getApiKey() {
 function onError(error) {
     console.log("Error: " + error);
 }
+*/
+function loadVariables() {
 
+    chrome.storage.local.get('rmDomain', function (result) {
+        DOMAIN = result.rmDomain;
+    });
+    chrome.storage.local.get('apiKey', function (result) {
+            API = result.apiKey;
+    });
+}
 // ---------------------------------------------------------
+
+loadVariables();
 
 document.addEventListener("click", function(e) {
 
@@ -38,7 +52,13 @@ document.addEventListener("click", function(e) {
   if (e.target.classList.contains("redmine_e"))
   {
       var chosenPage = "http://" + DOMAIN;
+      //Mozilla W3 browser extension code
+      /*
       browser.tabs.create({
+          url: chosenPage
+      });
+      */
+      chrome.tabs.create({
           url: chosenPage
       });
   }
@@ -47,8 +67,6 @@ document.addEventListener("click", function(e) {
   if (e.target.classList.contains("tasks_e"))
     {
       var xhttp = new XMLHttpRequest();
-
-
 
       getRedmineIssues(DOMAIN, API);
 
@@ -77,7 +95,6 @@ document.addEventListener("click", function(e) {
         document.addEventListener("click", function(e) {
             if (e.target.classList.contains("taskdesc_e"))
             {
-                // TODO: task add comments functionality
                 var taskId = e.target.id;
                 var subjectCell = "<td class='tasksubject_css tasks_e' colspan=2>" + (+taskId + 1) + ". " + arr[taskId].subject + "</td>";
                 var descriptionCell = "<td class='taskstatus_css comment_e' colspan=2 id=" + taskId + ">" + tasks.issues[taskId].description + "</td>";
@@ -183,16 +200,22 @@ document.addEventListener("click", function(e) {
   // Button "Settings"
   if (e.target.classList.contains("settings_e"))
   {
-      function onOpened() {
-          console.log("Settings page opened");
+    //Mozilla W3 browser extension code
+    /*
+     function onOpened() {
+         console.log("Settings page opened");
       }
 
-      function onError(error) {
+    function onError(error) {
           console.log("Error: " + error);
-      }
+     }
 
-      var openingSettings = browser.runtime.openOptionsPage();
+     var openingSettings = browser.runtime.openOptionsPage();
       openingSettings.then(onOpened, onError);
+      window.close();
+      */
+
+      chrome.runtime.openOptionsPage();
       window.close();
   }
 
