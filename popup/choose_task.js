@@ -1,6 +1,4 @@
-var API = "ec80bfff50f3f6bf04249a1e0e9e9830fc2a3b27";
-var DOMAIN = "rm.cit-sk.ru";
-/*
+
 var gettingApi = getApiKey();
 var gettingDomain = getRedmineDomain();
 var API = "";
@@ -30,7 +28,7 @@ function getApiKey() {
 function onError(error) {
     console.log("Error: " + error);
 }
-*/
+
 // ---------------------------------------------------------
 
 document.addEventListener("click", function(e) {
