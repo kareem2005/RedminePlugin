@@ -1,55 +1,73 @@
 html, body {
-    width: 400px;
 
 }
-.tasktable {
-    padding-bottom: 8px;
+
+.commentarea_css {
+    width: 350px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 .button {
     width: 120px;
     height: 30px;
-  margin: 3% auto;
-  padding: 4px;
-  text-align: center;
-  font-size: 1.2em;
-  cursor: pointer;
+    margin: 3% auto;
+    padding: 4px;
+    text-align: center;
+    font-size: 1.2em;
+    cursor: pointer;
 }
 
-
-.settings:hover {
-  background-color: #f2d2a4;
+.tasktable_css {
+    padding-bottom: 8px;
 }
-.redmine:hover {
-    background-color: #dc836e;
-}
-.tasks:hover {
-    background-color: #CFF2F2;
-}
-.taskstatus:hover {
+.commentform_css {
     background-color: #f2d2a4;
 }
-.ready:hover {
+
+
+.settings_css:hover {
+  background-color: #f2d2a4;
+}
+.redmine_css:hover {
     background-color: #dc836e;
 }
-.tasksubject:hover {
+.tasks_css:hover {
+    background-color: #CFF2F2;
+}
+.taskstatus_css:hover {
+    background-color: #f2d2a4;
+}
+.ready_css:hover {
+    background-color: #dc836e;
+}
+.tasksubject_css:hover {
     background-color: #CFF2F2;
 }
 
-.redmine {
+
+.redmine_css {
     background-color: #dc999f;
 }
-.settings {
+.settings_css {
  background-color: #f2ebdc;
 }
-.tasks {
+.tasks_css {
     background-color: #E5F2F2;
 }
-.taskstatus {
+.taskstatus_css {
     background-color: #f2ebdc;
 }
-.ready {
+.ready_css {
     background-color: #dc999f;
 }
-.tasksubject {
+.tasksubject_css {
+    background-color: #E5F2F2;
+}
+.taskcomment_css {
+    background-color: #dc999f;
+}
+.taskuser_css {
     background-color: #E5F2F2;
 }
