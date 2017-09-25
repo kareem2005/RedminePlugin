@@ -58,6 +58,7 @@ html, body {
 }
 .taskstatus_css {
     background-color: #f2ebdc;
+    white-space: pre-line;
 }
 .ready_css {
     background-color: #dc999f;
@@ -67,6 +68,7 @@ html, body {
 }
 .taskcomment_css {
     background-color: #dc999f;
+    white-space: pre-line;
 }
 .taskuser_css {
     background-color: #E5F2F2;
