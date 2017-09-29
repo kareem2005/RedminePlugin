@@ -32,6 +32,8 @@ function onError(error) {
     console.log("Error: " + error);
 }
 */
+
+
 function loadVariables() {
 
     chrome.storage.local.get('rmDomain', function (result) {
@@ -46,7 +48,6 @@ function loadVariables() {
 loadVariables();
 
 document.addEventListener("click", function(e) {
-
 
   // Button "Go to Redmine"
   if (e.target.classList.contains("redmine_e"))
@@ -102,11 +103,15 @@ document.addEventListener("click", function(e) {
             }
             if (e.target.classList.contains("ready_e"))
             {
+                var nowDate = new Date();
+                var jsonDate = nowDate.toISOString().slice(0,10);
                 var taskId = e.target.id;
                 var readyXhttp = new XMLHttpRequest();
                 var jsonStatus = '{'
                     + '"issue": {'
-                    + '"status_id": "5"'
+                    + '"status_id": "5",'
+                    + '"done_ratio": "100",'
+                    + '"due_date": "' + jsonDate + '"'
                     + '}'
                     + '}';
 
